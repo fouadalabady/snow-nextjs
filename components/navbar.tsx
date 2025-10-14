@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 // Logo component with exact Figma specifications
 function LogoComponent() {
   const logoSvg =
-    "/Logo En.svg";
+    "/Logo%20En.svg";
 
   return (
     <Link
@@ -14,10 +15,13 @@ function LogoComponent() {
       className="h-[48px] w-[106px] relative overflow-hidden shrink-0"
     >
       <div className="absolute inset-0">
-        <img
+        <Image
           alt="Snow Logo"
           className="block max-w-none size-full object-contain"
           src={logoSvg}
+          width={106}
+          height={48}
+          priority
         />
       </div>
     </Link>
@@ -40,8 +44,8 @@ function NavigationLinks() {
         <Link
           key={link.href}
           href={link.href}
-          className={`flex items-center justify-center gap-[10px] capitalize font-medium text-[16px] leading-normal transition-colors hover:text-[#384d82] ${
-            link.active ? "text-[#384d82]" : "text-[#6a7aa1]"
+          className={`flex items-center justify-center gap-[10px] capitalize font-medium text-[16px] leading-normal transition-colors hover:text-snow-secondary ${
+            link.active ? "text-snow-secondary" : "text-[#6a7aa1]"
           }`}
           style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
         >
@@ -63,7 +67,7 @@ export function Navbar() {
         </div>
         <div className="flex flex-col gap-[10px] items-start w-[122px] shrink-0">
           <Button
-            className="w-full bg-[#44c5e2] hover:bg-[#44c5e2]/90 text-white border-0 rounded-[8px] px-[16px] py-[8px] h-auto font-medium text-[16px] leading-normal"
+            className="w-full bg-snow-primary hover:bg-snow-primary/90 text-snow-secondary border-0 rounded-[8px] px-[16px] py-[8px] h-[40px] font-medium text-[16px] leading-normal"
             style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
           >
             Contact Us

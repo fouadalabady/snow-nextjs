@@ -4,6 +4,25 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Snow Brand Colors */
+  --color-snow-primary: var(--snow-primary);
+  --color-snow-primary-light: var(--snow-primary-light);
+  --color-snow-secondary: var(--snow-secondary);
+  --color-snow-accent: var(--snow-accent);
+  --color-snow-white: var(--snow-white);
+  --color-snow-black: var(--snow-black);
+  --color-snow-gray-50: var(--snow-gray-50);
+  --color-snow-gray-100: var(--snow-gray-100);
+  --color-snow-gray-200: var(--snow-gray-200);
+  --color-snow-gray-300: var(--snow-gray-300);
+  --color-snow-gray-400: var(--snow-gray-400);
+  --color-snow-gray-500: var(--snow-gray-500);
+  --color-snow-gray-600: var(--snow-gray-600);
+  --color-snow-gray-700: var(--snow-gray-700);
+  --color-snow-gray-800: var(--snow-gray-800);
+  --color-snow-gray-900: var(--snow-gray-900);
+  
+  /* shadcn/ui System Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -45,6 +64,26 @@
 
 :root {
   --radius: 0.625rem;
+  
+  /* Figma Brand Colors - Primary Design System */
+  --snow-primary: #384d82;
+  --snow-primary-light: #6a7aa1;
+  --snow-secondary: #e1e4ec;
+  --snow-accent: #2563eb;
+  --snow-white: #ffffff;
+  --snow-black: #000000;
+  --snow-gray-50: #f9fafb;
+  --snow-gray-100: #f3f4f6;
+  --snow-gray-200: #e5e7eb;
+  --snow-gray-300: #d1d5db;
+  --snow-gray-400: #9ca3af;
+  --snow-gray-500: #6b7280;
+  --snow-gray-600: #4b5563;
+  --snow-gray-700: #374151;
+  --snow-gray-800: #1f2937;
+  --snow-gray-900: #111827;
+  
+  /* shadcn/ui Design System */
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);

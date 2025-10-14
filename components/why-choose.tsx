@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 // Feature card component
@@ -14,22 +15,24 @@ function FeatureCard({ icon, title, highlighted = false }: FeatureCardProps) {
     <div
       className={`rounded-[12px] p-[24px] flex flex-col gap-[12px] items-start w-[272px] h-[162px] ${
         highlighted
-          ? "bg-[rgba(227,246,251,0.4)] border-2 border-[#44c5e2]"
-          : "bg-[rgba(227,246,251,0.4)]"
+          ? "bg-snow-light/40 border-2 border-snow-primary"
+          : "bg-snow-light/40"
       }`}
     >
       {/* Icon */}
       <div className="w-[48px] h-[48px] relative shrink-0">
-        <img
+        <Image
           alt="Feature Icon"
           className="w-full h-full object-contain"
           src={icon}
+          width={48}
+          height={48}
         />
       </div>
 
       {/* Title */}
       <p
-        className="text-[18px] font-medium text-[#44c5e2] leading-normal"
+        className="text-[18px] font-medium text-snow-primary leading-normal"
         style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
       >
         {title}
@@ -83,7 +86,7 @@ export function WhyChoose() {
             <div className="flex flex-col gap-[6px] items-start">
               {/* Gradient label */}
               <p
-                className="text-[24px] font-medium bg-gradient-to-b from-[#44c5e2] to-[#e3f6fb] bg-clip-text text-transparent"
+                className="text-[24px] font-medium bg-gradient-to-b from-snow-primary to-snow-light bg-clip-text text-transparent"
                 style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
               >
                 Why Choose Snow !
@@ -91,7 +94,7 @@ export function WhyChoose() {
 
               {/* Main title */}
               <h2
-                className="text-[32px] font-semibold text-[#585959] leading-normal"
+                className="text-[32px] font-semibold text-gray-700 leading-normal"
                 style={{ fontFamily: "var(--font-poppins)", fontWeight: 600 }}
               >
                 Pick The Qualified Team With +20 Years Of Experience , And More
@@ -100,7 +103,7 @@ export function WhyChoose() {
 
             {/* CTA button */}
             <Button
-              className="bg-[#44c5e2] hover:bg-[#44c5e2]/90 text-white border-0 rounded-[8px] px-[16px] py-[8px] h-auto font-medium text-[16px] leading-normal"
+              className="bg-snow-primary hover:bg-snow-primary/90 text-white border-0 rounded-[8px] px-[16px] py-[8px] h-auto font-medium text-[16px] leading-normal"
               style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
             >
               Contact Us

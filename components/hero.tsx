@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 // Hero button components with exact Figma specifications
@@ -19,7 +20,7 @@ function HeroButton({
   if (type === "Primary" && style === "white") {
     return (
       <Button
-        className={`bg-white hover:bg-white/90 text-[#384d82] border-0 rounded-[8px] px-[16px] py-[8px] h-[40px] font-medium text-[16px] leading-normal ${className}`}
+        className={`bg-snow-white hover:bg-snow-white/90 text-snow-secondary border-0 rounded-[8px] px-[16px] py-[8px] h-[40px] font-medium text-[16px] leading-normal ${className}`}
         style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
       >
         {text}
@@ -45,15 +46,18 @@ function HeroButton({
 // Main hero component with exact Figma specifications
 export function Hero() {
   const heroBackground =
-    "Stocks/HeroBackground.jpg";
+    "/Stocks/HeroBackground.jpg";
 
   return (
     <section className="relative w-full h-[820px] flex flex-col items-start justify-start box-border p-4 lg:p-[140px]">
       {/* Background image with exact positioning */}
-      <img
+      <Image
         alt="HVAC Equipment Background"
         className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
         src={heroBackground}
+        fill
+        priority
+        sizes="100vw"
       />
 
       {/* Content container with exact specifications */}

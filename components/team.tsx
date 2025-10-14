@@ -1,12 +1,13 @@
 "use client"
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button"
 
 // Enhanced Our Team section component with improved design elements
 export function Team() {
   return (
     <section className="w-full pt-[56px] px-4 lg:px-[140px] m-0">
-      <div className="bg-gradient-to-b from-[#44c5e2] to-[#384d82] py-[56px] px-4 lg:px-[197px] rounded-[12px] overflow-hidden">
+      <div className="bg-gradient-to-b from-snow-primary to-snow-secondary py-[56px] px-4 lg:px-[197px] rounded-[12px] overflow-hidden">
         <div className="flex flex-col items-center gap-[38px]">
           {/* Content */}
           <div className="flex flex-col items-center justify-center gap-[16px] w-full max-w-[766px] text-center">
@@ -14,7 +15,7 @@ export function Team() {
             <div className="flex flex-col items-center gap-[6px]">
               {/* Gradient label */}
               <p 
-                className="text-[24px] font-medium bg-gradient-to-b from-white to-[#e3f6fb] bg-clip-text text-transparent capitalize"
+                className="text-[24px] font-medium bg-gradient-to-b from-white to-snow-light bg-clip-text text-transparent capitalize"
                 style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
               >
                 Our Team
@@ -40,7 +41,7 @@ export function Team() {
             {/* CTA buttons */}
             <div className="flex gap-[24px] items-start flex-wrap justify-center">
               <Button 
-                className="bg-white hover:bg-white/90 text-[#384d82] border-0 rounded-[8px] px-[16px] py-[8px] h-auto font-medium text-[16px] leading-normal transition-all duration-300 hover:shadow-lg hover:scale-105"
+                className="bg-white hover:bg-white/90 text-snow-secondary border-0 rounded-[8px] px-[16px] py-[8px] h-auto font-medium text-[16px] leading-normal transition-all duration-300 hover:shadow-lg hover:scale-105"
                 style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
               >
                 Meet our team
@@ -58,10 +59,12 @@ export function Team() {
           
           {/* Team illustration - simplified */}
           <div className="relative w-[375px] h-[289px] shrink-0">
-            <img 
+            <Image 
               src="/illustrations/OurTeamStock.svg"
               alt="Our Professional HVAC Team"
               className="w-full h-full object-contain"
+              width={375}
+              height={289}
             />
           </div>
         </div>
