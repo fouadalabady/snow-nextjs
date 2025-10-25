@@ -27,7 +27,7 @@ function FAQItem({ question, answer, isOpen = false, onToggle }: FAQItemProps) {
       >
         <p 
           className={`text-[18px] font-medium capitalize leading-normal ${
-            isOpen ? "text-[#384d82]" : "text-[#6a7aa1]"
+            isOpen ? "text-snow-secondary" : "text-[#6a7aa1]"
           }`}
           style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
         >
@@ -37,7 +37,7 @@ function FAQItem({ question, answer, isOpen = false, onToggle }: FAQItemProps) {
         {/* Toggle icon */}
         <div className="w-[24px] h-[24px] flex items-center justify-center">
           {isOpen ? (
-            <Minus className="w-[16px] h-[16px] text-[#384d82]" />
+            <Minus className="w-[16px] h-[16px] text-snow-secondary" />
           ) : (
             <Plus className="w-[16px] h-[16px] text-[#6a7aa1]" />
           )}
@@ -48,7 +48,7 @@ function FAQItem({ question, answer, isOpen = false, onToggle }: FAQItemProps) {
       {isOpen && answer && (
         <div className="mt-[10px]">
           <p 
-            className="text-[14px] font-normal text-[#6a7aa1] leading-normal"
+            className="text-[14px] font-normal text-gray-600 leading-normal"
             style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
           >
             {answer}
@@ -91,7 +91,7 @@ export function FAQ() {
   };
 
   return (
-    <section className="w-full bg-white py-[80px]">
+    <section className="w-full bg-gray-50 py-[80px]">
       <div className="px-4 lg:px-[140px]">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-[60px]">
           {/* Section header */}
@@ -106,7 +106,7 @@ export function FAQ() {
             
             {/* Main title */}
             <h2 
-              className="text-[32px] font-semibold text-[#585959] leading-normal"
+              className="text-[32px] font-semibold text-gray-700 leading-normal"
               style={{ fontFamily: "var(--font-poppins)", fontWeight: 600 }}
             >
               Custom HVAC Solutions

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -9,7 +10,7 @@ function SectionTitle() {
     <div className="flex flex-col gap-[12px] items-center justify-center text-center max-w-[766px] mx-auto">
       {/* Gradient label */}
       <p
-        className="text-[24px] font-medium bg-gradient-to-b from-[#44c5e2] to-[#e3f6fb] bg-clip-text text-transparent capitalize"
+        className="text-[24px] font-medium bg-gradient-to-b from-snow-primary to-snow-light bg-clip-text text-transparent capitalize"
         style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
       >
         our Services
@@ -65,7 +66,7 @@ function ServiceCard({
       <div className="flex flex-col gap-[12px] items-start  max-w-[766px] pt-[48px] pb-0 pl-[100px] pr-[97px]">
         {/* Title */}
         <h3
-          className="text-[28px] font-semibold text-[#384d82] leading-normal w-full"
+          className="text-[28px] font-semibold text-snow-secondary leading-normal w-full"
           style={{ fontFamily: "var(--font-poppins)", fontWeight: 600 }}
         >
           {title}
@@ -82,7 +83,7 @@ function ServiceCard({
         {/* CTA buttons */}
         <div className="flex gap-[24px] items-start">
           <Button
-            className="bg-[#44c5e2] hover:bg-[#44c5e2]/90 text-[#384d82] border-0 rounded-[8px] px-[16px] py-[8px] h-[40px] font-medium text-[16px] leading-normal flex items-center gap-[10px]"
+            className="bg-snow-primary hover:bg-snow-primary/90 text-snow-secondary border-0 rounded-[8px] px-[16px] py-[8px] h-[40px] font-medium text-[16px] leading-normal flex items-center gap-[10px]"
             style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
           >
             {primaryButtonText}
@@ -91,7 +92,7 @@ function ServiceCard({
 
           <Button
             variant="outline"
-            className="bg-transparent hover:bg-[#44c5e2]/10 text-[#44c5e2] border-[1.5px] border-solid border-[#44c5e2] rounded-[8px] px-[16px] py-[8px] h-[40px] font-medium text-[16px] leading-normal"
+            className="bg-transparent hover:bg-snow-primary/10 text-snow-primary border-[1.5px] border-solid border-snow-primary rounded-[8px] px-[16px] py-[8px] h-[40px] font-medium text-[16px] leading-normal"
             style={{ fontFamily: "var(--font-poppins)", fontWeight: 500 }}
           >
             {secondaryButtonText}
@@ -101,10 +102,12 @@ function ServiceCard({
 
       {/* Illustration side */}
       <div className="w-[467px] h-[390px] overflow-hidden relative shrink-0">
-        <img
+        <Image
           alt="HVAC Service Illustration"
           className="w-full h-full object-contain"
           src={illustration}
+          width={467}
+          height={390}
         />
       </div>
     </div>
@@ -138,7 +141,7 @@ export function Services() {
   ];
 
   return (
-    <section className="w-full bg-[#f8f9fa] py-[80px]">
+    <section className="w-full bg-gray-50 py-[80px]">
       <div className="px-4 lg:px-[140px]">
         {/* Section Title */}
         <div className="mb-[69px]">
