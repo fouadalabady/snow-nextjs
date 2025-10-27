@@ -1,16 +1,18 @@
-import Image from 'next/image'
-import { ImmediateResponse } from '@/components/immediate-response'
-import { ContactUs } from '@/components/contact-us'
-import { FAQ } from '@/components/faq'
-import { Numbers } from '@/components/numbers'
-import { ServiceHero } from '@/components/service-hero'
-import { ServiceOverview } from '@/components/service-overview'
-import { ServiceDetailSection } from '@/components/service-detail-section'
+import Image from "next/image";
+import { ImmediateResponse } from "@/components/immediate-response";
+import { ContactUs } from "@/components/contact-us";
+import { FAQ } from "@/components/faq";
+import { Numbers } from "@/components/numbers";
+import { ServiceHero } from "@/components/service-hero";
+import { ServiceOverview } from "@/components/service-overview";
+import { ServiceDetailSection } from "@/components/service-detail-section";
+import { WhatWeOfferWrapper } from "@/components/what-we-offer-wrapper";
+import { TeamMembers } from "@/components/TeamMembers";
+import { OtherServices } from "@/components/other-services";
 
 export default function MaintenancePage() {
   return (
     <div className="min-h-screen bg-white">
-      
       {/* Hero Section */}
       <ServiceHero
         breadcrumbService="Periodic Maintenance & Rapid Repairs for Continuous Performance"
@@ -30,152 +32,276 @@ export default function MaintenancePage() {
       />
 
       {/* What Do We Offer Sections */}
-      
-      {/* Section 1: Immediate Emergency Response */}
-      <ServiceDetailSection
-        label="What Do We Offer"
-        title="Immediate Emergency Response"
-        description="Snow Immediate Emergency Response is available 24/7. Our team handles emergencies swiftly and professionally, minimizing downtime and restoring comfort."
-        features={[
-          "24/7 Immediate Assistance",
-          "0 Downtime and Disruption"
-        ]}
-        illustrationSrc="/services/service-1-1.svg"
-        illustrationAlt="Immediate Emergency Response"
-        backgroundColor="white"
-      />
+      <WhatWeOfferWrapper>
+        {/* Section 1: Immediate Emergency Response */}
+        <ServiceDetailSection
+          title="Immediate Emergency Response"
+          description="Snow Immediate Emergency Response is available 24/7. Our team handles emergencies swiftly and professionally, minimizing downtime and restoring comfort."
+          features={["24/7 Immediate Assistance", "0 Downtime and Disruption"]}
+          illustrationSrc="/services/service-1-1.svg"
+          illustrationAlt="Immediate Emergency Response"
+          backgroundColor="white"
+        />
 
-      {/* Section 2: Annual Maintenance Contracts (AMC) */}
-      <ServiceDetailSection
-        label="What Do We Offer"
-        title="Annual Maintenance Contracts (AMC)"
-        description="Our Annual Maintenance Contracts (AMC) offer regular visits and fixed Performance Maintenance to keep your systems running smoothly year-round."
-        features={[
-          "Scheduled Inspections And Maintenance Visits",
-          "Cleaning Of Filters And Heat Exchangers",
-          "Full Inspection Of Electrical And Mechanical Components",
-          "Detailed Performance Reports And Observations",
-          "Emergency Response As Part Of The Contract",
-          "Contract Customization By Facility Type (Residential, Commercial, Industrial)"
-        ]}
-        illustrationSrc="/services/service-1-2.svg"
-        illustrationAlt="Annual Maintenance Contracts"
-        benefits={{
-          title: "Contract Benefits",
-          cards: [
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Fewer Unexpected Breakdowns"
-            },
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Extended System Life"
-            },
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Better Energy Efficiency"
-            },
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M3 3v18h18M7 16l4-4 4 4 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Lower Long-term Operating Costs"
-            }
-          ]
-        }}
-        backgroundColor="gray"
-        reversed={true}
-      />
+        {/* Section 2: Annual Maintenance Contracts (AMC) */}
+        <ServiceDetailSection
+          title="Annual Maintenance Contracts (AMC)"
+          description="Our Annual Maintenance Contracts (AMC) offer regular visits and fixed Performance Maintenance to keep your systems running smoothly year-round."
+          features={[
+            "Scheduled Inspections And Maintenance Visits",
+            "Cleaning Of Filters And Heat Exchangers",
+            "Full Inspection Of Electrical And Mechanical Components",
+            "Detailed Performance Reports And Observations",
+            "Emergency Response As Part Of The Contract",
+            "Contract Customization By Facility Type (Residential, Commercial, Industrial)",
+          ]}
+          illustrationSrc="/services/service-1-2.svg"
+          illustrationAlt="Annual Maintenance Contracts"
+          benefits={{
+            title: "Contract Benefits",
+            cards: [
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M22 12h-4l-3 9L9 3l-3 9H2"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Fewer Unexpected Breakdowns",
+              },
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Extended System Life",
+              },
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Better Energy Efficiency",
+              },
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M3 3v18h18M7 16l4-4 4 4 6-6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Lower Long-term Operating Costs",
+              },
+            ],
+          }}
+          backgroundColor="gray"
+          reversed={true}
+        />
 
-      {/* Section 3: Planned Preventive Maintenance (PPM) */}
-      <ServiceDetailSection
-        label="What Do We Offer"
-        title="Planned Preventive Maintenance (PPM)"
-        description="Planned Preventive Maintenance (PPM) follows manufacturer recommendations and historical data to prevent failures before they occur."
-        features={[
-          "Visits Are Scheduled According To OEM Guidelines And Operating Data",
-          "Proactive Cleaning, Inspection, And Part Replacement",
-          "Full Inspection Of Electrical And Mechanical Components",
-          "Keeps Systems In Top Condition And Prevents Sudden Failures",
-          "Maintains Consistent Performance And Uptime"
-        ]}
-        illustrationSrc="/services/service-1-3.svg"
-        illustrationAlt="Planned Preventive Maintenance"
-        benefits={{
-          title: "PPM Objectives",
-          cards: [
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Minimize Unplanned Downtime"
-            },
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Extend Equipment Life"
-            },
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Lower Emergency Repair Costs"
-            },
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Improve Workplace Safety"
-            },
-            {
-              icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ),
-              title: "Ensure Quality And Productivity"
-            }
-          ]
-        }}
-        backgroundColor="white"
-      />
+        {/* Section 3: Planned Preventive Maintenance (PPM) */}
+        <ServiceDetailSection
+          title="Planned Preventive Maintenance (PPM)"
+          description="Planned Preventive Maintenance (PPM) follows manufacturer recommendations and historical data to prevent failures before they occur."
+          features={[
+            "Visits Are Scheduled According To OEM Guidelines And Operating Data",
+            "Proactive Cleaning, Inspection, And Part Replacement",
+            "Full Inspection Of Electrical And Mechanical Components",
+            "Keeps Systems In Top Condition And Prevents Sudden Failures",
+            "Maintains Consistent Performance And Uptime",
+          ]}
+          illustrationSrc="/services/service-1-3.svg"
+          illustrationAlt="Planned Preventive Maintenance"
+          benefits={{
+            title: "PPM Objectives",
+            cards: [
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M22 12h-4l-3 9L9 3l-3 9H2"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Minimize Unplanned Downtime",
+              },
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Extend Equipment Life",
+              },
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Lower Emergency Repair Costs",
+              },
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Improve Workplace Safety",
+              },
+              {
+                icon: (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-[#44c5e2]"
+                  >
+                    <path
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                ),
+                title: "Ensure Quality And Productivity",
+              },
+            ],
+          }}
+          backgroundColor="white"
+        />
 
-      {/* Section 4: Specialized Maintenance For Central AC Units & Chillers */}
-      <ServiceDetailSection
-        label="What Do We Offer"
-        title="Specialized Maintenance For Central AC Units & Chillers"
-        description="Specialized maintenance for central AC units and chillers ensures optimal performance, energy efficiency, and extended equipment life through expert care."
-        features={[
-          "24/7 Immediate Assistance",
-          "0 Downtime and Disruption"
+        {/* Section 4: Specialized Maintenance For Central AC Units & Chillers */}
+        <ServiceDetailSection
+          title="Specialized Maintenance For Central AC Units & Chillers"
+          description="Specialized maintenance for central AC units and chillers ensures optimal performance, energy efficiency, and extended equipment life through expert care."
+          features={["24/7 Immediate Assistance", "0 Downtime and Disruption"]}
+          illustrationSrc="/services/service-1-4.svg"
+          illustrationAlt="Specialized Maintenance"
+          backgroundColor="gray"
+          reversed={true}
+        />
+      </WhatWeOfferWrapper>
+
+      {/* Team Members Section */}
+      <TeamMembers />
+
+      {/* Other Services Section */}
+      <OtherServices
+        services={[
+          {
+            title: "Supply & Installation Of High-Performance AC Units",
+            description:
+              "We Provide End-To-End Solutions For Supplying And Installing AC Systems, Ensuring Precision, Performance, And Energy Efficiency Through The Use Of Cutting-Edge Technologies And Expert Teams.",
+            imageSrc: "/services/Service-2.jpg",
+            imageAlt: "Supply & Installation Service",
+            link: "/services/supply-installation",
+          },
+          {
+            title: "Indoor Air Quality (IAQ) Enhancement",
+            description:
+              "We Offer Regular System Maintenance And Fast, Effective Repair Services To Ensure Your AC Systems Operate Reliably And Efficiently.",
+            imageSrc: "/services/Service-3.jpg",
+            imageAlt: "Indoor Air Quality Service",
+            link: "/services/indoor-air-quality",
+          },
         ]}
-        illustrationSrc="/services/service-1-4.svg"
-        illustrationAlt="Specialized Maintenance"
-        backgroundColor="gray"
-        reversed={true}
       />
 
       {/* Service Types Section */}
@@ -189,7 +315,8 @@ export default function MaintenancePage() {
               Complete Maintenance Solutions
             </h2>
             <p className="font-normal text-sm md:text-base text-[#6a7aa1] max-w-3xl mx-auto leading-relaxed">
-              We offer comprehensive maintenance services tailored to different needs and system types
+              We offer comprehensive maintenance services tailored to different
+              needs and system types
             </p>
           </div>
 
@@ -197,13 +324,28 @@ export default function MaintenancePage() {
             {/* Preventive Maintenance */}
             <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 bg-[#44c5e2]/10 rounded-xl flex items-center justify-center mb-6">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="text-[#44c5e2]"
+                >
+                  <path
+                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </div>
-              <h3 className="font-semibold text-xl text-[#384d82] mb-3">Preventive Maintenance</h3>
+              <h3 className="font-semibold text-xl text-[#384d82] mb-3">
+                Preventive Maintenance
+              </h3>
               <p className="text-sm text-[#6a7aa1] mb-4 leading-relaxed">
-                Regular scheduled maintenance to prevent breakdowns and ensure optimal performance
+                Regular scheduled maintenance to prevent breakdowns and ensure
+                optimal performance
               </p>
               <ul className="space-y-2 text-sm text-[#6a7aa1]">
                 <li className="flex items-center gap-2">
@@ -224,11 +366,25 @@ export default function MaintenancePage() {
             {/* Emergency Repairs */}
             <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 bg-[#44c5e2]/10 rounded-xl flex items-center justify-center mb-6">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="text-[#44c5e2]"
+                >
+                  <path
+                    d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </div>
-              <h3 className="font-semibold text-xl text-[#384d82] mb-3">Emergency Repairs</h3>
+              <h3 className="font-semibold text-xl text-[#384d82] mb-3">
+                Emergency Repairs
+              </h3>
               <p className="text-sm text-[#6a7aa1] mb-4 leading-relaxed">
                 24/7 emergency repair services for urgent HVAC system failures
               </p>
@@ -251,14 +407,35 @@ export default function MaintenancePage() {
             {/* System Optimization */}
             <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:col-span-2 lg:col-span-1">
               <div className="w-16 h-16 bg-[#44c5e2]/10 rounded-xl flex items-center justify-center mb-6">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
-                  <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="text-[#44c5e2]"
+                >
+                  <path
+                    d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </div>
-              <h3 className="font-semibold text-xl text-[#384d82] mb-3">System Optimization</h3>
+              <h3 className="font-semibold text-xl text-[#384d82] mb-3">
+                System Optimization
+              </h3>
               <p className="text-sm text-[#6a7aa1] mb-4 leading-relaxed">
-                Performance tuning and efficiency improvements for existing systems
+                Performance tuning and efficiency improvements for existing
+                systems
               </p>
               <ul className="space-y-2 text-sm text-[#6a7aa1]">
                 <li className="flex items-center gap-2">
@@ -293,7 +470,8 @@ export default function MaintenancePage() {
               How We Maintain Your Systems
             </h2>
             <p className="font-normal text-sm md:text-base text-[#6a7aa1] max-w-3xl mx-auto leading-relaxed">
-              Our systematic approach ensures thorough maintenance and optimal system performance
+              Our systematic approach ensures thorough maintenance and optimal
+              system performance
             </p>
           </div>
 
@@ -303,7 +481,9 @@ export default function MaintenancePage() {
               <div className="w-16 h-16 bg-[#44c5e2] rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
-              <h3 className="font-semibold text-lg text-[#384d82] mb-2">Inspection</h3>
+              <h3 className="font-semibold text-lg text-[#384d82] mb-2">
+                Inspection
+              </h3>
               <p className="text-sm text-[#6a7aa1] leading-relaxed">
                 Comprehensive system inspection and diagnostic assessment
               </p>
@@ -314,7 +494,9 @@ export default function MaintenancePage() {
               <div className="w-16 h-16 bg-[#44c5e2] rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
-              <h3 className="font-semibold text-lg text-[#384d82] mb-2">Planning</h3>
+              <h3 className="font-semibold text-lg text-[#384d82] mb-2">
+                Planning
+              </h3>
               <p className="text-sm text-[#6a7aa1] leading-relaxed">
                 Detailed maintenance plan based on system condition and needs
               </p>
@@ -325,7 +507,9 @@ export default function MaintenancePage() {
               <div className="w-16 h-16 bg-[#44c5e2] rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
-              <h3 className="font-semibold text-lg text-[#384d82] mb-2">Execution</h3>
+              <h3 className="font-semibold text-lg text-[#384d82] mb-2">
+                Execution
+              </h3>
               <p className="text-sm text-[#6a7aa1] leading-relaxed">
                 Professional maintenance work performed by certified technicians
               </p>
@@ -336,9 +520,12 @@ export default function MaintenancePage() {
               <div className="w-16 h-16 bg-[#44c5e2] rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
-              <h3 className="font-semibold text-lg text-[#384d82] mb-2">Testing</h3>
+              <h3 className="font-semibold text-lg text-[#384d82] mb-2">
+                Testing
+              </h3>
               <p className="text-sm text-[#6a7aa1] leading-relaxed">
-                System testing and performance verification to ensure optimal operation
+                System testing and performance verification to ensure optimal
+                operation
               </p>
             </div>
           </div>
@@ -354,5 +541,5 @@ export default function MaintenancePage() {
       {/* Contact Us Section */}
       <ContactUs />
     </div>
-  )
+  );
 }

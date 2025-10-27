@@ -6,7 +6,6 @@ interface BenefitCard {
 }
 
 interface ServiceDetailSectionProps {
-  label: string;
   title: string;
   description: string;
   features: string[];
@@ -21,7 +20,6 @@ interface ServiceDetailSectionProps {
 }
 
 export function ServiceDetailSection({
-  label,
   title,
   description,
   features,
@@ -51,14 +49,6 @@ export function ServiceDetailSection({
 
           {/* Content */}
           <div className={reversed ? "lg:col-start-1 lg:row-start-1" : ""}>
-            <p className="bg-clip-text bg-gradient-to-b from-[#44c5e2] to-[#e3f6fb] text-transparent font-medium text-xl md:text-2xl capitalize mb-3"
-              style={{
-                fontFamily: "var(--font-poppins)",
-                fontWeight: 500,
-                WebkitTextFillColor: "transparent",
-              }}>
-              {label}
-            </p>
             <h2 className="font-semibold text-2xl md:text-3xl lg:text-[32px] text-[#384d82] capitalize mb-4 lg:mb-6 leading-tight"
               style={{ fontFamily: "var(--font-poppins)", fontWeight: 600 }}>
               {title}
