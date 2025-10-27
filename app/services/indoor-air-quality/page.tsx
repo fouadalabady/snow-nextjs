@@ -146,3 +146,18 @@ export default function IndoorAirQualityPage() {
           </div>
         </div>
       </section>
+
+      {/* Numbers Section */}
+      <Numbers />
+
+      {/* Immediate Response */}
+      <ImmediateResponse />
+
+      {/* FAQ */}
+      <FAQ />
+
+      {/* Contact Us Section */}
+      <ContactUs />
+    </div>
+  )
+}
