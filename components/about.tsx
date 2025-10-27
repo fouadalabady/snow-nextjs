@@ -11,7 +11,7 @@ export function About() {
       <div className="absolute inset-0 pointer-events-none">
         {/* Main background shape at top right */}
         <Image
-          src="/illustrations/AboutSectionShape.svg"
+          src="/Illustrations/AboutSectionShape.svg"
           alt=""
           width={976.5}
           height={658.5}
@@ -77,7 +77,7 @@ export function About() {
           <div className="relative w-[496.5px] h-[397px] mt-[149px] mr-[140px]">
             {/* Main HVAC illustration */}
             <Image
-              src="/illustrations/AboutIllustration.svg"
+              src="/Illustrations/AboutIllustration.svg"
               alt="HVAC Maintenance Illustration"
               width={496.5}
               height={397}

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 // Enhanced Our Team section component with image aligned to bottom
@@ -65,10 +66,12 @@ export function Team() {
           {/* Team illustration - aligned to bottom with no padding */}
           <div className="flex justify-center">
             <div className="relative w-[375px] h-[289px] shrink-0">
-              <img 
-                src="/illustrations/OurTeamStock.svg"
+              <Image 
+                src="/Illustrations/OurTeamStock.svg"
                 alt="Our Professional HVAC Team"
                 className="w-full h-full object-contain object-bottom"
+                width={375}
+                height={289}
               />
             </div>
           </div>
