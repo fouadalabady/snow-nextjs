@@ -137,7 +137,7 @@ export function FAQ() {
               className="text-[16px] font-normal text-[#6a7aa1] leading-relaxed mt-2"
               style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
             >
-              Have questions? We've got answers. Browse our most frequently
+              Have questions? We&apos;ve got answers. Browse our most frequently
               asked questions below.
             </p>
           </div>

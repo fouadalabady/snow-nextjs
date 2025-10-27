@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ImmediateResponse } from "@/components/immediate-response";
 import { ContactUs } from "@/components/contact-us";
 import { FAQ } from "@/components/faq";

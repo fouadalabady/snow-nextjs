@@ -118,7 +118,7 @@ export function Suppliers() {
           className="text-center text-[#6a7aa1] text-sm md:text-base mt-8 max-w-[600px] mx-auto"
           style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
         >
-          We partner with the world's leading HVAC manufacturers to bring you
+          We partner with the world&apos;s leading HVAC manufacturers to bring you
           the best quality equipment and solutions.
         </p>
       </div>
