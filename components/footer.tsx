@@ -121,33 +121,6 @@ export function Footer() {
                   Indoor Air Quality
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-[14px] font-normal text-[#6a7aa1] hover:text-snow-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
-                >
-                  Emergency Repairs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-[14px] font-normal text-[#6a7aa1] hover:text-snow-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
-                >
-                  System Upgrades
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-[14px] font-normal text-[#6a7aa1] hover:text-snow-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
-                >
-                  Energy Audits
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -178,24 +151,7 @@ export function Footer() {
                   Our Team
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-[14px] font-normal text-[#6a7aa1] hover:text-snow-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#testimonials"
-                  className="text-[14px] font-normal text-[#6a7aa1] hover:text-snow-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
-                >
-                  Testimonials
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="#faq"
@@ -203,15 +159,6 @@ export function Footer() {
                   style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
                 >
                   FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#blog"
-                  className="text-[14px] font-normal text-[#6a7aa1] hover:text-snow-primary transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
-                >
-                  Blog
                 </Link>
               </li>
             </ul>
@@ -327,7 +274,7 @@ export function Footer() {
               className="text-[#6a7aa1]"
               style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
             >
-              © 2024 Snow HVAC. All rights reserved.
+              © 2025 Snow HVAC. All rights reserved.
             </p>
           </div>
 
