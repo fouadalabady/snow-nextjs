@@ -5,6 +5,7 @@ import { FAQ } from '@/components/faq'
 import { Numbers } from '@/components/numbers'
 import { ServiceHero } from '@/components/service-hero'
 import { ServiceOverview } from '@/components/service-overview'
+import { ServiceDetailSection } from '@/components/service-detail-section'
 
 export default function MaintenancePage() {
   return (
@@ -26,6 +27,155 @@ export default function MaintenancePage() {
         description="We offer regular system maintenance and fast, effective repair services to ensure your AC systems operate reliably and efficiently."
         illustrationSrc="/services/service-1-overview.svg"
         illustrationAlt="HVAC Maintenance Service Overview"
+      />
+
+      {/* What Do We Offer Sections */}
+      
+      {/* Section 1: Immediate Emergency Response */}
+      <ServiceDetailSection
+        label="What Do We Offer"
+        title="Immediate Emergency Response"
+        description="Snow Immediate Emergency Response is available 24/7. Our team handles emergencies swiftly and professionally, minimizing downtime and restoring comfort."
+        features={[
+          "24/7 Immediate Assistance",
+          "0 Downtime and Disruption"
+        ]}
+        illustrationSrc="/services/service-1-1.svg"
+        illustrationAlt="Immediate Emergency Response"
+        backgroundColor="white"
+      />
+
+      {/* Section 2: Annual Maintenance Contracts (AMC) */}
+      <ServiceDetailSection
+        label="What Do We Offer"
+        title="Annual Maintenance Contracts (AMC)"
+        description="Our Annual Maintenance Contracts (AMC) offer regular visits and fixed Performance Maintenance to keep your systems running smoothly year-round."
+        features={[
+          "Scheduled Inspections And Maintenance Visits",
+          "Cleaning Of Filters And Heat Exchangers",
+          "Full Inspection Of Electrical And Mechanical Components",
+          "Detailed Performance Reports And Observations",
+          "Emergency Response As Part Of The Contract",
+          "Contract Customization By Facility Type (Residential, Commercial, Industrial)"
+        ]}
+        illustrationSrc="/services/service-1-2.svg"
+        illustrationAlt="Annual Maintenance Contracts"
+        benefits={{
+          title: "Contract Benefits",
+          cards: [
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Fewer Unexpected Breakdowns"
+            },
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Extended System Life"
+            },
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Better Energy Efficiency"
+            },
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M3 3v18h18M7 16l4-4 4 4 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Lower Long-term Operating Costs"
+            }
+          ]
+        }}
+        backgroundColor="gray"
+        reversed={true}
+      />
+
+      {/* Section 3: Planned Preventive Maintenance (PPM) */}
+      <ServiceDetailSection
+        label="What Do We Offer"
+        title="Planned Preventive Maintenance (PPM)"
+        description="Planned Preventive Maintenance (PPM) follows manufacturer recommendations and historical data to prevent failures before they occur."
+        features={[
+          "Visits Are Scheduled According To OEM Guidelines And Operating Data",
+          "Proactive Cleaning, Inspection, And Part Replacement",
+          "Full Inspection Of Electrical And Mechanical Components",
+          "Keeps Systems In Top Condition And Prevents Sudden Failures",
+          "Maintains Consistent Performance And Uptime"
+        ]}
+        illustrationSrc="/services/service-1-3.svg"
+        illustrationAlt="Planned Preventive Maintenance"
+        benefits={{
+          title: "PPM Objectives",
+          cards: [
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Minimize Unplanned Downtime"
+            },
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Extend Equipment Life"
+            },
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Lower Emergency Repair Costs"
+            },
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Improve Workplace Safety"
+            },
+            {
+              icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#44c5e2]">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ),
+              title: "Ensure Quality And Productivity"
+            }
+          ]
+        }}
+        backgroundColor="white"
+      />
+
+      {/* Section 4: Specialized Maintenance For Central AC Units & Chillers */}
+      <ServiceDetailSection
+        label="What Do We Offer"
+        title="Specialized Maintenance For Central AC Units & Chillers"
+        description="Specialized maintenance for central AC units and chillers ensures optimal performance, energy efficiency, and extended equipment life through expert care."
+        features={[
+          "24/7 Immediate Assistance",
+          "0 Downtime and Disruption"
+        ]}
+        illustrationSrc="/services/service-1-4.svg"
+        illustrationAlt="Specialized Maintenance"
+        backgroundColor="gray"
+        reversed={true}
       />
 
       {/* Service Types Section */}
