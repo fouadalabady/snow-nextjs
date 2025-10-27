@@ -197,7 +197,7 @@ export function ServicesSection({
         "We provide end-to-end solutions for supplying and installing AC systems, ensuring precision, performance, and energy efficiency through the use of cutting-edge technologies and expert teams.",
       image: "/services/Service-2.jpg",
       imageAlt: "HVAC Installation Service",
-      primaryButtonLink: "/services",
+      primaryButtonLink: "/services/supply-installation",
       secondaryButtonLink: "/contact",
     },
     {
@@ -207,7 +207,7 @@ export function ServicesSection({
         "We offer regular system maintenance and fast, effective repair services to ensure your AC systems operate reliably and efficiently.",
       image: "/services/Service-3.jpg",
       imageAlt: "Indoor Air Quality Enhancement",
-      primaryButtonLink: "/services",
+      primaryButtonLink: "/services/indoor-air-quality",
       secondaryButtonLink: "/contact",
     },
   ];
