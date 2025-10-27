@@ -17,7 +17,7 @@ export function About() {
         />
       </div>
 
-      <div className="relative z-10 flex items-center justify-between px-4 lg:px-[140px] py-[80px] h-full">
+      <div className="container-section relative z-10 flex items-center justify-between py-[80px] h-full">
         {/* Content side */}
         <div className="flex flex-col gap-[12px] items-start justify-center w-full lg:w-[567px]">
           {/* Section label */}

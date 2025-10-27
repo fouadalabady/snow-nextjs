@@ -142,7 +142,7 @@ export function Services() {
 
   return (
     <section className="w-full bg-gray-50 py-[80px]">
-      <div className="px-4 lg:px-[140px]">
+      <div className="container-section">
         {/* Section Title */}
         <div className="mb-[69px]">
           <SectionTitle />

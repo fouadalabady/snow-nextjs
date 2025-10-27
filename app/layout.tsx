@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +22,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Snow HVAC - Excellence in HVAC & Cooling Solutions",
-  description: "Delivering energy-efficient HVAC solutions for homes, offices, and industrial sites across the Kingdom.",
+  description:
+    "Delivering energy-efficient HVAC solutions for homes, offices, and industrial sites across the Kingdom.",
 };
 
 export default function RootLayout({
@@ -33,7 +36,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
-        {children}
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );

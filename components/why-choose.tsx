@@ -78,7 +78,7 @@ export function WhyChoose() {
 
   return (
     <section className="w-full bg-white py-[80px]">
-      <div className="px-4 lg:px-[140px]">
+      <div className="container-section">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-[60px]">
           {/* Content side */}
           <div className="flex flex-col gap-[24px] items-start w-full lg:w-[568px]">
