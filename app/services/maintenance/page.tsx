@@ -26,7 +26,7 @@ export default function MaintenancePage() {
         label="About The Service"
         title="Periodic Maintenance & Rapid Repairs For Continuous Performance"
         description="We offer regular system maintenance and fast, effective repair services to ensure your AC systems operate reliably and efficiently."
-        illustrationSrc="/services/service-1-overview.svg"
+        illustrationSrc="/services/Service-1-overview.svg"
         illustrationAlt="HVAC Maintenance Service Overview"
       />
 
@@ -37,7 +37,7 @@ export default function MaintenancePage() {
           title="Immediate Emergency Response"
           description="Snow Immediate Emergency Response is available 24/7. Our team handles emergencies swiftly and professionally, minimizing downtime and restoring comfort."
           features={["24/7 Immediate Assistance", "0 Downtime and Disruption"]}
-          illustrationSrc="/services/service-1-1.svg"
+          illustrationSrc="/services/Service-1-1.svg"
           illustrationAlt="Immediate Emergency Response"
           backgroundColor="white"
         />
@@ -54,7 +54,7 @@ export default function MaintenancePage() {
             "Emergency Response As Part Of The Contract",
             "Contract Customization By Facility Type (Residential, Commercial, Industrial)",
           ]}
-          illustrationSrc="/services/service-1-2.svg"
+          illustrationSrc="/services/Service-1-2.svg"
           illustrationAlt="Annual Maintenance Contracts"
           benefits={{
             title: "Contract Benefits",
@@ -156,7 +156,7 @@ export default function MaintenancePage() {
             "Keeps Systems In Top Condition And Prevents Sudden Failures",
             "Maintains Consistent Performance And Uptime",
           ]}
-          illustrationSrc="/services/service-1-3.svg"
+          illustrationSrc="/services/Service-1-3.svg"
           illustrationAlt="Planned Preventive Maintenance"
           benefits={{
             title: "PPM Objectives",
@@ -271,7 +271,7 @@ export default function MaintenancePage() {
           title="Specialized Maintenance For Central AC Units & Chillers"
           description="Specialized maintenance for central AC units and chillers ensures optimal performance, energy efficiency, and extended equipment life through expert care."
           features={["24/7 Immediate Assistance", "0 Downtime and Disruption"]}
-          illustrationSrc="/services/service-1-4.svg"
+          illustrationSrc="/services/Service-1-4.svg"
           illustrationAlt="Specialized Maintenance"
           backgroundColor="gray"
           reversed={true}
