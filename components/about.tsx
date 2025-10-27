@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 // About section component with exact Figma specifications
@@ -9,10 +10,12 @@ export function About() {
       {/* Background decorative shapes */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Main background shape at top right */}
-        <img
+        <Image
           src="/illustrations/AboutSectionShape.svg"
           alt=""
-          className="absolute w-[976.5px] h-[658.5px] object-contain"
+          width={976.5}
+          height={658.5}
+          className="absolute object-contain"
           style={{ left: "464.5px", top: "0.5px" }}
         />
       </div>
@@ -73,9 +76,11 @@ export function About() {
         <div className="hidden lg:block absolute right-0 top-0">
           <div className="relative w-[496.5px] h-[397px] mt-[149px] mr-[140px]">
             {/* Main HVAC illustration */}
-            <img
+            <Image
               src="/illustrations/AboutIllustration.svg"
               alt="HVAC Maintenance Illustration"
+              width={496.5}
+              height={397}
               className="w-full h-full object-contain"
             />
           </div>

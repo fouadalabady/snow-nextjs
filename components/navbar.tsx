@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import React from "react";
@@ -16,10 +17,12 @@ function LogoComponent() {
       className="h-[40px] w-[88px] md:h-[48px] md:w-[106px] relative overflow-hidden shrink-0"
     >
       <div className="absolute inset-0">
-        <img
+        <Image
           alt="Snow Logo"
           className="block max-w-none size-full object-contain"
           src={logoSvg}
+          fill
+          sizes="(max-width: 768px) 88px, 106px"
         />
       </div>
     </Link>

@@ -1,4 +1,3 @@
-import { Hero } from "@/components/hero";
 import { Numbers } from "@/components/numbers";
 import { ImmediateResponse } from "@/components/immediate-response";
 import { FAQ } from "@/components/faq";

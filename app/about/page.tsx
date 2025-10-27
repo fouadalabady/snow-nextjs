@@ -90,10 +90,12 @@ export default function AboutUs() {
           
           {/* Story Image */}
           <div className="absolute right-0 top-0 h-full w-[707px] hidden lg:block">
-            <img 
+            <Image 
               alt="Our Story" 
               className="w-full h-full object-cover"
               src="/Stocks/OurStory.jpg"
+              fill
+              sizes="707px"
             />
           </div>
         </div>
